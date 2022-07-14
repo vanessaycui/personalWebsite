@@ -17,7 +17,7 @@ def home():
 
     year = datetime.now().year
     if request.method == "POST":
-        # in from JS will be recorded in JSON. Flask reads from JSON>
+        # in from JS will be recorded in JSON. Flask reads from JSON
         contactinfo = request.get_json()
 
         name = contactinfo["name"]
