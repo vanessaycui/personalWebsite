@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vanessa Cui</title>
+    <link rel="icon" href="/static/images/favicon.ico">
+
+    <!--bootstrap CDN links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- css style sheet-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   
+
+    <!-- google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=M+PLUS+Rounded+1c:wght@100;300;400&family=Sacramento&display=swap"
+          rel="stylesheet">
+
+</head>
+<body onload="document.body.style.opacity='1'">
+<div class="row">
+<!--    LEFT NAVIGATION BAR PANEL   -->
+    <div class="col-lg-3">
+
+        <!--LARGE SCREEN SIZE PANEL-->
+        <nav class="nav flex-column fixed-top d-none d-lg-block text-center" id="sidebar">
+            
+                <div class="card">
+                    <div class="card-body">
+                        <img class="profile-img" src="{{url_for('static', filename='/images/vanessa.jpg')}}" alt="photoID">
+                        <p class="title">vanessa</p>
+                    </div>
+                </div>
+            <div class="container-fluid">
+                <a class="underline" href="#intro">main</a>
+            </div>
+          
+                <div class="container-fluid">
+                    <a class="underline" href="#work">work</a>
+                </div>
+           
+            <div class="container-fluid">
+                <a class="underline" href="#education">education</a>
+            </div>
+        
+            <div class="container-fluid">
+                <a class="underline" href="#skills">skills</a>
+            </div>
+           
+            <div class="container-fluid">
+                <a class="underline" href="#projects">projects</a>
+            </div>
+       
+            <div class="container-fluid">
+                <a class="underline" href="#contact">contact</a>
+            </div>
+        </nav>
+
+        <!--SMALL SCREEN SIZE BOTTOM PANEL-->
+        <nav class="navbar fixed-bottom d-lg-none">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#intro"><img class="icon-img"
+                                                           src="{{url_for('static', filename='/images/home.png')}}"
+                                                           alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#work"><img class="icon-img"
+                                                         src="{{url_for('static', filename='/images/resume.png')}}"
+                                                         alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects"><img class="icon-img"
+                                                         src="{{url_for('static', filename='/images/star.png')}}"
+                                                         alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"href="#contact"><img class="icon-img"
+                                                           src="{{url_for('static', filename='/images/contact.png')}}"
+                                                           alt=""></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+<!--    RIGHT PANEL - MAIN SECTION   -->
+
+    <div class="col-lg-9" data-bs-smooth-scroll="true" tabindex="0">
+
+        <!-- MAIN -->
+
+        <section>
+            <div id="intro">
+                 <img id="topimage" class="misty-image" src="{{url_for('static', filename='/images/misty-4.jpg')}}" alt="trees photo">
+                 <hr>
+                 <div class="title-box">
+                    <h1 class="ml3 title"> hello there! </h1>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+                    <p>
+                        I'm a professional Structural Engineer and an aspiring web and mobile app developer based in Toronto, Ontario.
+                    </p>
+                </div>
+                <hr>
+                <img id="botimage"class="misty-image" src="{{url_for('static', filename='/images/misty.jpg')}}" alt="trees photo">
+                <hr>
+
+            </div>
+        </section>
+
+        <!-- WORK -->
+        <section class="scroll-container">
+            <div class="container-fluid" id="work">
+                <div class="scroll-element js-scroll fade-in-bottom" >
+                    <h1> work experience </h1>
+                        <table>
+                            <tr>
+                                <td><span>Jacobs</span>  <br> <p>Structural Engineer<br>Toronto, Ontario, Canada</p></td>
+                                <td>May 2021-May 2022</td>
+                            </tr>
+                            <tr>
+                                <td><span>RJC Engineers</span>  <br> <p>Structural Restoration Engineering Intern<br>Toronto, Ontario, Canada</p></td>
+                                <td>June 2019-June 2021</td>
+                            </tr>
+                            <tr>
+                                <td><span>Simpson Gumpertz & Heger Inc.</span>  <br> <p>Staff I - Building Technology<br> San Francisco, California, USA</p></td>
+                                <td>July 2016-November 2017</td>
+                            </tr>
+                        </table>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="scroll-container">
+            <div class="container-fluid" id="education">
+                <div class="scroll-element js-scroll fade-in-bottom" >
+                    <!-- EDUCATION -->
+                    <h1> education </h1>
+                        <table>
+                            <tr>
+                                <td><p><span>University of Toronto</span> <br>Master of Engineering <br> Structural Engineering</p></td>
+                                <td>2018-2019</td>
+                            </tr>
+                            <tr>
+                                <td><span>University of Waterloo</span> <br> <p>Bachelor of Applied Science <br> Civil Engineering</p></td>
+                                <td>2011-2016</td>
+                            </tr>
+                        </table>
+                        
+                </div>
+            </div>
+        </section>
+        <hr>
+                    <!-- SKILLS -->
+            <section class="scroll-container">
+                <div class="container-fluid" id="skills">
+            <div class="container-fluid scroll-element js-scroll fade-in-bottom" >
+                      <h1> skills </h1>
+                    <table>
+                        <tr>
+                            <td><p> python </p></td>
+                            <td><p> HTML/CSS/JS </p></td>
+                            <td><p> C </p></td>
+                            <td><p> Flask </p></td>
+                            <td><p> Matlab</p></td>
+                            <td><p>Swift</p></td>
+                        </tr>
+                    </table>
+                    
+            </div>
+            </div>
+            </section>
+            <hr>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="scroll-container">
+            <div class="container-fluid" id="projects">
+
+                <div class="row scroll-element js-scroll fade-in-bottom">
+                    <h1> projects </h1>
+                    <div class="col-lg-7 scroll-element js-scroll fade-in-bottom">
+
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+
+                                    <img class = "project-image container-fluid" src="/static/images/flower.jpg" class="d-block w-100" alt="...">
+                                    <h5 class="project-text text-center"> *need to update* project 1 </h5>
+                                </div>
+                                <div class="carousel-item">
+
+                                    <img class="project-image container-fluid" src="/static/images/flower2.jpg"
+                                         class="d-block w-100" alt="...">
+                                    <h5 class="project-text text-center"> *need to update* project 2 </h5>
+                                </div>
+                                <div class="carousel-item">
+
+                                    <img class = "project-image container-fluid" src="/static/images/morebirds.jpg" class="d-block w-100" alt="...">
+                                    <h5 class="project-text text-center"> *need to update* project 3 </h5>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT -->
+        <section class="scroll-container">
+            <div class="container-fluid " id="contact">
+                <div class="row">
+                    <div class="col-lg-7 scroll-element js-scroll fade-in-bottom">
+                        <h1 class="title"> get in touch </h1>
+                        <form id="form">
+                            <label>name: </label>
+                            <br>
+                            <input id="sendername" class="contactform" name="name" type="text" placeholder="name">
+                            <br>
+                            <label>email: </label>
+                            <br>
+                            <input id="senderemail" class="contactform" name="email" type="email" required placeholder="email">
+                            <br>
+                            <label>message: </label>
+                            <br>
+                            <textarea id="message" class="contactform" name="message" type="text"
+                                      placeholder="message"></textarea>
+                            <hr>
+
+                            <input id="submitbtn" class="btn" type="submit" value="send">
+                            <p id="alert" class="hide">Message received. Thanks!</p>
+
+                            <hr>
+                        </form>
+                    </div>
+                    <!-- ADDITIONAL CONTACT INFORMATION -->
+                    <div class="col-lg-5 scroll-element js-scroll fade-in-bottom">
+                        <h1 class="title"> info </h1>
+                        <div class="container">
+                            <img class="location-img" src="{{url_for('static', filename='/images/location.png')}}"
+                                 alt="Location:">
+                            <h6 class="wrap">Toronto, Ontario, Canada</h6>
+                            <br>
+                            <img class="airplane-img" src="{{url_for('static', filename='/images/airplane.png')}}"
+                                 alt="Email:">
+                            <h6 class="wrap">vanessa.y.cui@gmail.com</h6>
+                            <br>
+                            <a class = "icon" href="https://www.linkedin.com/in/vanessa-cui-p-eng-9b763294/" target="_blank"><img
+                                    class="contact-img" src="{{url_for('static', filename='/images/linkedin.png')}}"
+                                    alt="Linkedin"></a>
+                            <a class = "icon" href="https://github.com/vanessaycui" target="_blank"><img
+                                    class="contact-img" src="{{url_for('static', filename='/images/github.png')}}"
+                                    alt="Github"></a>
+                            <hr>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="bottom-container">
+                <p class="copyright">© {{year}} Vanessa Cui </p>
+            </div>
+        </footer>
+    </div>
+</div>
+
+
+
+<!--personal JS links-->
+<script src="static/app.js"></script>
+<!-- need this for jquery to post -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+<!--bootstrap CDN links-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+       
+
+
+</body>
+</html>
